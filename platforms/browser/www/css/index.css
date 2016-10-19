@@ -8492,7 +8492,6 @@ footer.page-footer {
   z-index: 999;
 }
 .mobile-img {
-  height: 260px;
   width: 100%;
   float: left;
   overflow: hidden;
@@ -8523,4 +8522,37 @@ ul.collapsible.popout {
 }
 a.waves-effect.waves-light.modal-trigger.right {
     color: #fff;
+}
+input,
+textarea {
+  color: #000;
+}
+textarea.materialize-textarea {
+  padding: .8rem 0 0rem 0;
+}
+.modal .input-field label.active {
+    top: 3.5em;
+}
+.modal .input-field label {
+  top: 0;
+}
+.modal .input-field.col label {
+  left: 0;
+}
+.logo {
+  position: relative;
+  right: 15px;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  top: 5px;
+  background: #fff;
+  border-radius: 100%;
+  color: #ee6e73;
+  font-size: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .modal {
+      width: 93%;
+  }
 }

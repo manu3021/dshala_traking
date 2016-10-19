@@ -35,6 +35,33 @@ var app = {
         humbergerClick.add("open");
       }
     },*/
+    contactUs: function(a,b,c,d) {
+      var fname = document.getElementById(a).value;
+      var lname = document.getElementById(b).value;
+      var email = document.getElementById(c).value;
+      //var msg   = document.getElementById(d).value;
+      if(fname == "" || lname == "" || email == "" ) {
+        alert("Pleae make sure all fields are fill");
+        return;
+      }
+      var atpos = email.indexOf("@");
+      var dotpos = email.lastIndexOf(".");
+      if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+        alert("Not a valid e-mail address");
+        return false;
+      }
+       var xhttp;
+       xhttp = new XMLHttpRequest();
+       var data = "fname=" +fname + "&lname="+ lname + "&email="+email ;
+       xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+          alert(xhttp.responseText);
+           
+         }
+       };
+       xhttp.open("POST", 'http://localhost:8080/chatbox/hw.php', true);
+       xhttp.send(data);
+    },
 
     
 

@@ -49,13 +49,14 @@ under the License.
     <!-- header-->
     <nav class="top-nav">
         <div onclick="app.openSidenav()" id="SideNav" class="container close"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+          <span class="right center logo">HT</span>
     </nav>
     <ul  id="nav-mobile" class="side-nav fixed" style="transform: translateX(-100%);">
         <li class="bold"><a href="index.html" class="waves-effect waves-teal">Home</a></li>
         <li class="bold"><a href="about.html" class="waves-effect waves-teal">About Us</a></li>
         <li class="bold"><a href="gallary.html" class="waves-effect waves-teal">Gallary</a></li>
         <li class="bold"><a href="place.html" class="waves-effect waves-teal">Place</a></li>
-        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Showcase</a></li>
+        
     </ul>
     <!-- slider -->
     <main>
@@ -77,43 +78,44 @@ under the License.
                 </section>
             </main>
 
-            <footer class="page-footer">
-                <div class="footer-copyright">
-                    <div class="container">
-                        © 2014 Copyright Text
-                        <a class="waves-effect waves-light modal-trigger right" href="#modal1">Contact Us</a>
-                        <div id="modal1" class="modal">
-                            <div class="modal-content">
-                                <div class="form">
-                                    <form action="#" method="get">
-                                        <div class="input-field col s12">
-                                            <input id="FirstName" name="FirstName" type="text" required />
-                                            <label for="FirstName">Firstname</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="LastName" name="LastName" type="text"  required />
-                                            <label for="LastName">Lastname</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="Email" name="Email" type="email"  />
-                                            <label for="Email">Email</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <textarea class="materialize-textarea" id="MessageText" name="MessageText" rows="5" required ></textarea>
-                                            <label for="MessageText">Message</label>
-                                        </div>
-                                        <input class="btn" type="button" value="submit"/>
-                                    </form>
+         <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+               
+                <a class="waves-effect waves-light modal-trigger right" href="#modal1">Contact Us</a>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <div class="form">
+                            <form action="#" method="get">
+                                <div class="input-field col s12">
+                                    <input id="FirstName" name="FirstName" type="text" required />
+                                    <label for="FirstName">Firstname</label>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#!" class=" modal-action btn modal-close waves-effect waves-green">Cancel</a>
-                            </div>
+                                <div class="input-field col s12">
+                                    <input id="LastName" name="LastName" type="text"  required />
+                                    <label for="LastName">Lastname</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="Email" name="Email" type="email"  />
+                                    <label for="Email">Email</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <textarea class="materialize-textarea" id="MessageText" name="MessageText" rows="5" required ></textarea>
+                                    <label for="MessageText">Message</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <input class="btn left" onclick="app.contactUs('FirstName','LastName','Email','MessageText');" type="button" value="submit"/>
+                                    <a href="#!" class="right modal-action btn modal-close waves-effect waves-green">Cancel</a>
+                                </div>
+                            </form>
                         </div>
-
                     </div>
+
                 </div>
-            </footer>
+
+            </div>
+        </div>
+    </footer>
             <script type="text/javascript" src="cordova.js"></script>
             <script type="text/javascript" src="js/index.js"></script>
             <script type="text/javascript">
