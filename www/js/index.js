@@ -20,21 +20,23 @@ var app = {
     //click function to show the side menu 
     // Bind Event Listeners
 
-    /*openSidenav: function() {
-      var humbergerClick = document.getElementById("SideNav").classList;
-      document.getElementById("nav-mobile").style.transform = "translateX(0px)";
-      document.getElementById("nav-mobile").classList.toggle('open');
-      if (humbergerClick.contains("close")) {
-        humbergerClick.remove("close");
-      } else {
-        humbergerClick.add("close");
-      }
+    showHide: function(a,b) {
+      var humbergerClick = document.getElementById(a).classList;
+
+      var addclass = document.getElementById(b).classList;
+  
       if (humbergerClick.contains("open")) {
         humbergerClick.remove("open");
+        addclass.remove("open");
+        document.getElementById(a).textContent = "Show More";
       } else {
         humbergerClick.add("open");
+        addclass.add("open");
+        document.getElementById(a).textContent = "Less";
+
       }
-    },*/
+    },
+
     contactUs: function(a,b,c,d) {
       var fname = document.getElementById(a).value;
       var lname = document.getElementById(b).value;
@@ -62,7 +64,6 @@ var app = {
        xhttp.open("POST", 'http://localhost:8080/chatbox/hw.php', true);
        xhttp.send(data);
     },
-
-    
+   
 
 };

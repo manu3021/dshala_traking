@@ -8551,6 +8551,23 @@ textarea.materialize-textarea {
   color: #ee6e73;
   font-size: 20px;
 }
+.hide.open {
+  display: block !important;
+}
+.list-treck h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.list-treck .collapsible-header {
+  min-height: auto;
+}
+.margin-right {
+  margin-right: 10px;
+}
+.margin-bottom {
+  margin-bottom: 15px;
+}
+
 @media only screen and (max-width: 992px) {
   .modal {
       width: 93%;
