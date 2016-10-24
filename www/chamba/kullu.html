@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>Kullu treking</title>
+<!-- Good default declaration:
+* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+* Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+* Enable inline JS: add 'unsafe-inline' to default-src
+* Enable eval(): add 'unsafe-eval' to default-src
+* Create your own at http://cspisawesome.com
+-->
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+
+<body>
+    <!-- header-->
+    <nav class="top-nav">
+        <div onclick="app.openSidenav()" id="SideNav" class="container close"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+          <span class="right center logo"><a href="../index.html">HT</a></span>
+    </nav>
+    <ul  id="nav-mobile" class="side-nav fixed" style="transform: translateX(-100%);">
+        <li class="bold"><a href="../index.html" class="waves-effect waves-teal">Home</a></li>
+        <li class="bold"><a href="../about.html" class="waves-effect waves-teal">About Us</a></li>
+        <li class="bold"><a href="../gallary.html" class="waves-effect waves-teal">Gallary</a></li>
+        <li class="bold"><a href="../place.html" class="waves-effect waves-teal">Treking Place</a></li>
+       
+    </ul>
+    <!-- slider -->
+    <main>
+        <div class="row">
+        <div class="mobile-img"><img class="materialboxed" src="img/kullu.jpg" /> </div>
+            <div class="col s12">
+                <h5>Kullu-Manali Treks</h5>
+                <p>Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. It has a reputation as a backpacking center and honeymoon destination. Set on the Beas River, it’s a gateway for skiing in the Solang Valley and trekking in Parvati Valley. It's also a jumping-off point for paragliding, rafting and mountaineering in the Pir Panjal mountains.</p><p id="text-collapse" class="hide">Many Trekking Routes are available in Manali. Major treks in Manali are Beas Kund Trek, Bhrigu Lake Trek, Chandrakhani Trek, Chandra Taal Trek and many more. Manali is a year-round magnet. Backpackers come to hang out in the hippie villages around the main town; adventurers come for trekking, climbing, mountain biking, canyoning, paragliding, rafting and skiing; and Indian families and honeymooners come for the cool mountain air and a taste of snow on a day trip to the Rohtang La. Manali is also the main jumping-off point (between June and October) for Ladakh and Spiti. It makes sense to unwind and feed up here for a few days while organizing your trip into the mountains. Most International travellers stay in the villages of Vashisht or Old Manali. Manali is at a height of 2050 meters and spreads along the banks of the gurgling Beas River. Kullu is a broad open valley formed by the Beas river between Manali and Largi. This valley is famous for its temples, beauty and its majestic hills covered with pine and deodar forest and sprawling apple orchards. The course of the Beas river presents a succession of magnificent, clad with forests of deodar, towering above trees of pine on the lower rocky ridges. Kullu valley is sandwiched between the Pir Panjal, Lower Himalayan and Great Himalayan range. Kullu area is known for Kullu shawl, made of many natural fibers including pashmina, sheep-wool and angora.</p><a id="showHide" class="right btn" onclick="app.showHide('showHide','text-collapse');">Show More</a>
+            </div>
+        </div>
+        <ul class="collapsible list-treck" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Naggar-Malana over Chandrakhani Pass</h5>
+                </div>
+                <div class="collapsible-body"><p>Chandrakhani Pass is one of the most beautiful and serene pass, at an altitude of 3660 m located in the Kullu valley. Chandrakhani Pass offers fabulous views of the Deo Tibba peak, Pir Panjal and Parbati range of mountains. The trek is one of the most beautiful treks that introduces the traveler to the remote, hilly cultures of Himachal Pradesh. Legend has that Jamlu (the presiding deity at Malana), opened a basket containing the gods of Kullu at the Chandrakhani Pass and the strong winds blew the gods to their present abodes. Below the Chandarkhani pass of the Kullu valley lies a small cluster of around two hundred stone roof houses constituting a village called Malana. Its inimitable culture and the temple of Jamlu distinguish the village. Malana stands out as an autonomous self-sufficient unit whose inhabitants claim Greek ancestry. Malana is connected to Kullu by three mountain passes - it can be reached from Parbati valley crossing over the 3180 metres rashol pass and via Naggar over the 3600 metres beautiful Chanderkhani pass. For the outsiders, there is a long list of do's and don'ts to be followed in the village. The people are friendly but outsiders are told to keep distance and not to touch anything in the village. Kanashi, the language of Malana, does not resemble any of the dialects spoken in its neighbourhood but seems to be a mixture of Sanskrit and several Tibetan dialects. Two important festivals are celebrated in Malana. One called Badoh Mela is celebrated in august and the other called Fagdi mela in February.</p>
+                 <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal2">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal2" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6762.541963047594!2d77.25656207421395!3d32.061918724775154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39045e22d968b59f%3A0x93935fe036e39909!2sMalana%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1477020715970" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Malana-Kullu across Rashol Pass</h5>
+                </div>
+                <div class="collapsible-body"><p>Below the Chanderkhani pass of the Kulu Valley lies a small cluster of around two hundred stone roof houses constituting a village called Malana.  Its inimitable culture and the temple of Jamlu distinguish the village.  The village consists of around 1500 inhabitants and has an impeccable system of administration with a higher and lower court guided by the spirit of village God Jamlu.  Malana stands out as an autonomous self-sufficient unit whose inhabitants claim Greek ancestry.
+Malana is connected to Kulu by three mountain passes - it can be reached from Parbati valley crossing over the 3180 metres Rashol Pass and via Nagar over the 3600 metres beautiful Chanderkhani pass.  The easiest way to reach Malana is from Jari. Jari is two hours drive from Kulu and is situated at the confluence of the Malana and Manikaran nallah, which join to form the Parbati River. Jari is an entry point to Malana.  About 1.5 km. Malana is divided into two - upper Malana (Dhara Beda) and lower Malana (Sor Beda).  Malana is inhabited by only Rajputs.   The shrine of Renuka Devi is situated in lower Malana.  The Shrine with its intricate woodwork is noteworthy for its architectural excellence.  Horns of animals sacrificed in the temple complex are usually fixed on the facade of the temple.</p>
+                 <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal3">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal3" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6762.541963047594!2d77.25656207421395!3d32.061918724775154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39045e22d968b59f%3A0x93935fe036e39909!2sMalana%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1477020820711" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Beas Kund Trek from Manali</h5>
+                </div>
+                <div class="collapsible-body"><p>Beas Kund, Kullu-Manali Valley’s major attraction, is set against the backdrop of several mountain peaks such as the Shitidhar Peak, Friendship Peak, Hanuman Tibba, Ladakhi Peak, Rocky Challenger and others. Along the way to Beas Kund is the Solang Ropeway Point; a skiing spot and Bakerthach a preferred camping site. The Bhrigu lake and Beas Kund Trek in Himachal Pradesh is every adventurer’s paradise. This trek is suitable for both beginners as well as advanced-level trekkers as the slopes are moderately steep yet offer challenging trails every now and then. From Solang Nallah, the route winds through the famous Solang Valley. Solang valley is famous for its ski slopes & Para gliding. On this trek you will see amazing views of lush green meadows, glaciers and snow-capped mountain peaks. The trail goes via Dhundi and Bakarthach to enter the Beas Kund glacier, the birthplace of the River Beas. This is an enjoyable and Moderate level trek.</p>
+                     <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal4">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal4" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107911.71316035929!2d77.06536628050624!3d32.30537751231109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390483ccab44e191%3A0xcc4134ec35f6803a!2sBeas+Kund!5e0!3m2!1sen!2sin!4v1477020929070" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Bhrigu Lake Trek</h5>
+                </div>
+                <div class="collapsible-body"><p>Embark on this exciting journey on a 4 days 3 night trip and get a chance to explore the enduing beauty of the region. Located at an elevation of 4300 meters in the east of Rohtang Pass and can be accessed from Gulaba Village. Get a chance to visit Vashista temple in Manali, famous for it's hot water springs.
+The legend is that great sage Rishi Bhrigu used to mediate near the lake and hence its been rendered sacred. The locals believe that's the reason the water never freezes even in winters.Bhrigu Lake trek offers everything what a beginner or experience hiker looks for as the trail goes through virgin forests and lush green meadows and offer breath-taking birds eye view of the surrounding valleys of Kullu, Solang and Rohtang. The nature here is bountiful with her gift of wildlife.There is a neatly carved wooden temple, hot springs, surrounding waterfalls, and choice of cuisines available making it a favorite destination for hikers.</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal5">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal5" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26980.34145975119!2d77.1959663191814!3d32.297271191627885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390487659b679543%3A0xfad8503056f5bc93!2sBhrigu+Lake+Trek+Start!5e0!3m2!1sen!2sin!4v1477021016251" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+        
+
+        </ul>
+    </main>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+               Himachal Pradesh Trecking
+                <a class="waves-effect waves-light modal-trigger right" href="#modal1">Contact Us</a>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <div class="form">
+                            <form action="#" method="get">
+                                <div class="input-field col s12">
+                                    <input id="FirstName" name="FirstName" type="text" required />
+                                    <label for="FirstName">Firstname</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="LastName" name="LastName" type="text"  required />
+                                    <label for="LastName">Lastname</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="Email" name="Email" type="email"  />
+                                    <label for="Email">Email</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <textarea class="materialize-textarea" id="MessageText" name="MessageText" rows="5" required ></textarea>
+                                    <label for="MessageText">Message</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <input class="btn left" onclick="app.contactUs('FirstName','LastName','Email','MessageText');" type="button" value="submit"/>
+                                    <a href="#!" class="right modal-action btn modal-close waves-effect waves-green">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/../cordova.js"></script>
+    <script type="text/javascript" src="/../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

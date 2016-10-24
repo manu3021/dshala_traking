@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>dharmshala tracking</title>
+<!-- Good default declaration:
+* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+* Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+* Enable inline JS: add 'unsafe-inline' to default-src
+* Enable eval(): add 'unsafe-eval' to default-src
+* Create your own at http://cspisawesome.com
+-->
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+
+<body>
+    <!-- header-->
+    <nav class="top-nav">
+        <div onclick="app.openSidenav()" id="SideNav" class="container close"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+          <span class="right center logo"><a href="../index.html">HT</a></span>
+    </nav>
+    <ul  id="nav-mobile" class="side-nav fixed" style="transform: translateX(-100%);">
+        <li class="bold"><a href="../index.html" class="waves-effect waves-teal">Home</a></li>
+        <li class="bold"><a href="../about.html" class="waves-effect waves-teal">About Us</a></li>
+        <li class="bold"><a href="../gallary.html" class="waves-effect waves-teal">Gallary</a></li>
+        <li class="bold"><a href="../place.html" class="waves-effect waves-teal">Treking Place</a></li>
+       
+    </ul>
+    <!-- slider -->
+    <main>
+        <div class="row">
+        <div class="mobile-img"><img class="materialboxed" src="img/chamba.jpg" /> </div>
+            <div class="col s12">
+                <h5>Chamba Trecks</h5>
+                <p>Chamba  is an ancient town in the Chamba district in the state of Himachal Pradesh, in northern India.  Located at an altitude of 996 metres (3,268 ft) above mean sea level, the town is situated on the banks of the Ravi River (a major tributary of the Trans-Himalayan Indus River), at its confluence with the Sal River.</p><p id="text-collapse" class="hide"> Chamba is bounded on north-west by Jammu and Kashmir, on the north-east and east by Ladakh area of Jammu and Kashmir state and Lahaul and Bara-Bangal area of Himachal Pradesh, on the south-east and south by the District Kangra of Himachal Pradesh and Gurdaspur District of the Punjab. Chamba the land of lord Shiva is famous for its untouched natural beauty. The district has Dalhousie, Khajjiar, Chamba Town, Pangi and Bharamour as main tourist destinations. There are five lakes, five wild life sanctuaries and countless number of temples. Chamba, is a small but attractive tourist destination of Himachal Pradesh, is known for its exquisite natural beauty. The place, located amidst picturesque and verdant valleys, is visited by tourist round the year. Sub-Himalayan range of mountains, full of diverse flora and fauna, make Chamba an exhilarating experience. Pleasing climate of the place is another factor why Chamba is one among the popular tourist destinations in the whole of India.</p><a id="showHide" class="right btn" onclick="app.showHide('showHide','text-collapse');">Show More</a>
+            </div>
+        </div>
+        <ul class="collapsible list-treck" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Chamba-Sach Pass-Pangi valley</h5>
+                </div>
+                <div class="collapsible-body"><p>Pangi—the snow-bound valley—is located in the mid-Himalayan region . It remains cut off for more than six months in a year. Heavy snowfall and semi-arctic climate makes the living very tough here. Recently Killar, the headquarters of Pangi, has been linked with a jeepable road which, however, remains in use for merely two months in a year due to adverse weather conditions. It is a place where myth is history and mystery is reality. Remarkable in its rugged grandeur, austere and exquisite beauty, it is a trekkers' paradise. Pangi has many unknown destinations, unsealed peaks and breath-taking trek routes. In fact, till now the access to the valley is through the old routes—across Sach pass, Cheni pass and via Jammu & Kashmir.</p>
+                 <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal2">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal2" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38050.240007940294!2d76.12182186202115!3d32.547564755182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391cbdcc1d2b79c9%3A0x4d6719d7059007af!2sChamba%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1476876790635" width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Chamba-Cheni Pass-Killar </h5>
+                </div>
+                <div class="collapsible-body"><p>Cheni Pass (4400 meters) connects Churah area of Chamba District with Mindhal Village in Pangi. This pass is generally used by Mindhal and Kulal Villages of Pangi Valley as distance is lesser for them compared to Sach Pass. An alternative way back over the Pir Panjal from the Chandra-Bhaga to Chamba, this pass lies a few Km SE of the Sach.  It is more strenuous and less frequented, taking 4-5days from Kilar to Trela roadhead in Chamba Valley</p>
+                 <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal3">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal3" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38050.240007940294!2d76.12182186202115!3d32.547564755182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391cbdcc1d2b79c9%3A0x4d6719d7059007af!2sChamba%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1476876790635" width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Bharmour-Chobiapass-Lahaul valley </h5>
+                </div>
+                <div class="collapsible-body"><p>Chobia Pass is the second highest pass in the Pir- Panjal mountain range, an interesting and adventurous trek of 5-6 days over one of the toughest treks. In this trek, tracker can view the beauty of Pir- Panjal range The Gaddies (shepherds) after spending six months in lower reaches of Kangra and Una District of Himachal Pradesh come to Bharmour, and move towards Lauhal and Spiti through Kugti and Chobia passes to graze their flocks.  This Pass is very risky at the time of snowfall or over fresh snow for tracking as crevasses open up on Lahaul side in monsoon months and are difficult to negotiate. Gaddis also sacrifice few sheep’s when they are crossing Chobia Pass to the Goddess Marali for safe and easy crossing. Few of shepherd also cross another Pass in Lauhal known as Baralacha pass as grass of Lauhal and Spiti is much nutrient than other grasses; this is the main reason to go to Lauhal and Spiti with their flocks. June is the best month for trekking this pass. Chobia Pass lies between 2 minor peaks Tent Peak (6133m ) and Barakanda Peak (5877 ) of the Pir Panjal Ranges.</p>
+                     <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal4">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal4" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38050.240007940294!2d76.12182186202115!3d32.547564755182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391cbdcc1d2b79c9%3A0x4d6719d7059007af!2sChamba%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1476876790635" width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Bharmour-Kugti Pass-Lahaul valley </h5>
+                </div>
+                <div class="collapsible-body"><p>Kugti Pass is the highest altitude pass in the Pir- Panjal range, an interesting and adventurous trek of 5-6 days over one of the tough but not the most difficult. In this track, tracker can view the beauty of Pir- Panjal It is virtually unexplored – and perhaps that is its beauty – one of the unknown treks of India, yet marked with all the grandness of any great Himalayan trek. If you love trekking, then the Kugti Pass is a trek that needs to be a priority in your treks for the future.</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal5">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal5" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3367.168155052217!2d76.53437951444947!3d32.44143350832903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390353f809643603%3A0x364b400d387e1666!2sAnna+Adventures+%26+Tours!5e0!3m2!1sen!2sin!4v1477226816837" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Bharmour -Bara Bhangal-Kaliheni Pass-Manali</h5>
+                </div>
+                <div class="collapsible-body"><p>The vertical cliff between Manali and Bara Bhanghal or the gateway to Manali from Bara Bhanghal is known as Kaliheni Pass. Kali means black and heni means a glacier. If we combine two words means black glacier. So, Kaliheni Pass means the pass of the black glacier.  Kalihani Pass at an altitude of approximately (4830 meters) is a tricky negotiation through ice, snow on glacier, and moraine. A small and beautiful glacial lake waits on the descent of the pass. For Bara Bhanghal you can trek from Manali over Kaliheni Pass, Bir Billing over Thamsar Pass also have access from Bharmour. Whenever you leave Bara Bhanghal via Kaliheni pass, you are in real adventure and unforgettable trekking experience.</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal6">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal6" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3367.168155052217!2d76.53437951444947!3d32.44143350832903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390353f809643603%3A0x364b400d387e1666!2sAnna+Adventures+%26+Tours!5e0!3m2!1sen!2sin!4v1477226910562" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Bharmour-Baijnath-Palampur across Jalsu Pass</h5>
+                </div>
+                <div class="collapsible-body"><p>Jalsu Pass (3425 meters) is perhaps the easiest in Dhauladhar connecting upper Ravi Valley with Kangra. Since altitude is less and grade is moderate it is most freqented by locals crossing over to Kangra. People from Bhara Bhangal cross Jalsu Pass with their cattle when Thamsar Pass closes. The pass opens up very early. Those used to walking in snow can cross it even in May and November. Jalsu is an experience in itself. The rolling grasslands with vegetation extending deep into the trail, sprinkling of conifers, rhododendron bushes and the beautiful yellow grass flowers offer a colourful experience which few other passes can match. Unlike other Dhauladhar passes, its beauty is not in the bareness and rockiness but in the variety of vegetation it supports and colours it shows on both sides. You also meet a lot of people on the way, shepherds, shopkeepers, tourists. So, if you are here to meet people, understand culture while also appreciating the views, this is the pass for you. Pir Panjal ranges are visible but the perspective is completely different. Being a popular shepherd trail, there are lots of temporary stops with food and shelter on offer.</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal7">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal7" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1689.591480107349!2d76.53872522596293!3d32.11836083393804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904b3da19fbbe37%3A0x6ad100ac5dcd8203!2sNorwood+Green!5e0!3m2!1sen!2sin!4v1477227005000" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Chamba-Dharamshala across Waru Pass</h5>
+                </div>
+                <div class="collapsible-body"><p>Talang Pass (4667 meters) is one of the highest passes of Dhauladhars and is a considerably difficult pass to maneuver. You will need our trained crew for crossing this dangerous and mysterious pass. It involves steep ascent and long walk on snows and technical route negotiation. The highest peak of this region Matterhorn (4946 meters) is north-west of this pass and Talang Pass serves as a base camp for climbing this beautiful peak. The name of the pass is derived from the local god Talang whose abode is supposed to be at the top of this pass. There are two very beautiful lakes near the pass (one is small though and called Dali) while the bigger one is called Arjun ka Talab and is the source of Bander khud. There are many beautiful waterfalls near the pass. This pass offers a commanding view of Manimahesh Kailash rage and Pir Panjals. There is a temple at the top of the pass made of rock slabs, cairns, tridents, bells dedicated to lord Talang.</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal8">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal8" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38050.240007940294!2d76.12182186202115!3d32.547564755182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391cbdcc1d2b79c9%3A0x4d6719d7059007af!2sChamba%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1476876790635" width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Chamba-Bhara Bhangal-Kangra via Thamsar Pass</h5>
+                </div>
+                <div class="collapsible-body"><p>Waru pass lies to the northwest to Singhar Pass. Waru means “The gateway of Wind” and winds with very high velocity blow over this pass. The trek passes throught a number of intermediary ridges, dense forest, rivulets and snow nullahs. This trek is an easy one and poses no difficulty even for trekkers with little experience in trekking. Situated at 3850 meters, locals use this pass frequently to cross from Palampur to Chamba. Enroute Waru Pass we will get to see mesmerizing views of Dhauladhars, Kangra and Chamba valley. We will also cross Satchali, which has got it's name from seven different rivulets mingling together. It's a beautiful glacier. The chirping of the birds intermingled with the murmur of streams flowing down the valley makes the atmosphere very enchanting. There are some improved huts of Gujjars and shepherds and a rock shelter.</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal9">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal9" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38050.240007940294!2d76.12182186202115!3d32.547564755182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391cbdcc1d2b79c9%3A0x4d6719d7059007af!2sChamba%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1476876790635" width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                     <h5 class="collection-item">Bharmour-Hadsar-Manimahesh</h5>
+                </div>
+                <div class="collapsible-body"><p>Manimahesh (4115 meters) is a beautiful Lake situated at the base of Mount Kailash or Chamba Kailash (5775 meters) is considered to be the abode of Lord Shiva and is held by great reverence by the people. Located in Bharmour (2199 meters), home of nomadic Gaddi tribes, It has many old temples, some about 1300 year old. In the months of August and September thousands of pilgrims from all over India undertake pilgrimage to Manimahesh Lake. There are many different routes to Manimahesh but the most famous is from Hadsar which is a 13 kilometers trek</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal10">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal10" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38050.240007940294!2d76.12182186202115!3d32.547564755182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391cbdcc1d2b79c9%3A0x4d6719d7059007af!2sChamba%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1476876790635" width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+
+        </ul>
+    </main>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+               Himachal Pradesh Trecking
+                <a class="waves-effect waves-light modal-trigger right" href="#modal1">Contact Us</a>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <div class="form">
+                            <form action="#" method="get">
+                                <div class="input-field col s12">
+                                    <input id="FirstName" name="FirstName" type="text" required />
+                                    <label for="FirstName">Firstname</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="LastName" name="LastName" type="text"  required />
+                                    <label for="LastName">Lastname</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="Email" name="Email" type="email"  />
+                                    <label for="Email">Email</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <textarea class="materialize-textarea" id="MessageText" name="MessageText" rows="5" required ></textarea>
+                                    <label for="MessageText">Message</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <input class="btn left" onclick="app.contactUs('FirstName','LastName','Email','MessageText');" type="button" value="submit"/>
+                                    <a href="#!" class="right modal-action btn modal-close waves-effect waves-green">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/../cordova.js"></script>
+    <script type="text/javascript" src="/../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

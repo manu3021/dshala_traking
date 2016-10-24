@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>dharmshala tracking</title>
+<!-- Good default declaration:
+* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+* Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+* Enable inline JS: add 'unsafe-inline' to default-src
+* Enable eval(): add 'unsafe-eval' to default-src
+* Create your own at http://cspisawesome.com
+-->
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/custom.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+
+<body>
+    <!-- header-->
+    <nav class="top-nav">
+        <div onclick="app.openSidenav()" id="SideNav" class="container close"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+          <span class="right center logo"><a href="../index.html">HT</a></span>
+    </nav>
+    <ul  id="nav-mobile" class="side-nav fixed" style="transform: translateX(-100%);">
+        <li class="bold"><a href="../index.html" class="waves-effect waves-teal">Home</a></li>
+        <li class="bold"><a href="../about.html" class="waves-effect waves-teal">About Us</a></li>
+        <li class="bold"><a href="../gallary.html" class="waves-effect waves-teal">Gallary</a></li>
+        <li class="bold"><a href="../place.html" class="waves-effect waves-teal">Treking Place</a></li>
+       
+    </ul>
+    <!-- slider -->
+    <main>
+        <div class="row">
+        <div class="mobile-img"><img class="materialboxed" src="img/kangra.jpg" /> </div>
+            <div class="col s12">
+                <h5>Kangra Trecks</h5>
+                <p>We believe that climbing and hiking in high mountains and wilderness nourishes your soul and replenish your senses. Once back from a beautiful mountain trek, your heart will always long for that amazing experience and next time you will look forward to an even bigger thrill and arduous adventure. It's a relationship you develop for life, with nature, beautiful mountains, the fresh air and wilderness.</p>
+            </div>
+        </div>
+        <ul class="collapsible list-treck" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Triund and Lahesh Caves</h5>
+                </div>
+                <div class="collapsible-body"><p>Triund is the crown jewel of Dharamshala , situated in the laps of Dhauladhar mountains, it has the perfect view of the Dhauladhars on one side and Kangra valley on the other. Triund is a very popular trekking spot and attracts a lot of tourists every year from India and all over the world . With well-defined forest trails and breath-taking views of the entire Kangra valley, The view of the evening sky from Triund is a good enough reason to pitch a tent here for the night. The length of the trek makes it apt for a weekend. There is no dearth of eating options as there are several cafes on the way, like Magic View, Scenic View and Snowline Café. The trekking scene here is well-organised and one can embark on multiple treks of longer duration here, namely Indrahar Pass, Minkiani Pass, Kareri Lake and all the way to Kuarsi Pass and Mani-Mahesh. If you have a day to spare, fancy trekking from Triund till Lahesh Cave and explore the meadows below Indrahar Pass. The trek offer panoramic views of Bhagsu village, Mcleodganj, Dharamsala valley and distant views of Shivalik hills and plains of Kangra valley. The trek is moderate in nature. Triund is a large land of green grass and pastures. One can see the mighty Dhauladhar ranges just above the eyes. This is the base camp and  acclimatization point for trekkers climbing the Indarahara Pass.</p>
+                 <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal2">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal2" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.57560886423!2d76.35060331478158!3d32.26949898112825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b569847f825f7%3A0x2782e22007536f1a!2sInformation+Center!5e0!3m2!1sen!2sin!4v1477019318363" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Kareri Lake</h5>
+                </div>
+                <div class="collapsible-body"><p>Kareri village is about 4 hrs walk from the last road head of a village called Ghera, from Dharamshala one can drive till Ghera. Niyund is a river/stream flowing from the Kareri lake and the setting of the entire village is quite picturesque. One can explore this entire area and camp next to the wonderful streams, Trek to the lake is approximately 14 kms from here, If short on time one can drive from Dharamshala or Mcleodgang via Shahpur to nioli village and start the trek to Kareri Lake.</p>
+                 <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal3">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal3" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3371.475943544251!2d76.2718266647832!3d32.32593018111053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391ca80050d1b137%3A0x8998e7a496017f34!2sKareri+Lake!5e0!3m2!1sen!2sin!4v1477019401556" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Dhauladhar Round Trek</h5>
+                </div>
+                <div class="collapsible-body"><p>This is an awesome trek who have time to spare and want to go easy on difficulty. In this trek you combine the two most popular treks of the Dhauladhars, Triund and Kareri Lake. Not only this we will get to camp at the most awesome locations of Bal, Laqa, Lahesh Caves along with the two above. This is an easy trek going through  forests of Oak, Rhododendron and Deodar in the foothills of the Dhauladhar. On the way we visit several tribal villages. The trek offers added attraction for the bird watchers. Beautiful alpine meadows carpeted with flowers and medicinal plants, pasturelands, flocks of goats, sheep and wild birds and superb views from the passes make this a most wonderful route through a landscape dotted with many villages where we pause to meet the villagers and relax. We will get a chance to see beautiful scenery and overlook famous passes of Dhauladhars, Minikiani Pass, Bleni Pass and Indrahara Pass from up close.</p>
+                     <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal4">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal4" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107792.32915858722!2d76.11617083360406!3d32.40548673035953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391cbd4d8a060c11%3A0x812ba6c4754cfee!2sDhauladhar!5e0!3m2!1sen!2sin!4v1477019505911" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Indrahara Pass Trek</h5>
+                </div>
+                <div class="collapsible-body"><p>Indrahara Pass is one of the most visited and stunning treks of Dhauladhars and you reach and impressive altitude of 4350 meters over over the snowbound Dhauladhar range. Rated as moderate path, this trek will take you through green pastures, dense Deodar and Rhododendron forests. You will get spectacular views of sacred peak of Mani Mahesh Kailash and the snow-covered Pir Panjal Range to the north while to the south you can see the amazing Indian plains till the far horizon. Trekking on this route will offer an ultimate adventurous experience as this trek comprises of continuous climbing often over boulders. Initially, this trek begins with a steady climb through the Himalayan region and turns into a steep climb. You will experience walking through rich wildlife areas and witness wild goats, leopard and Monal bird. The best season to visit this trek is between mid May to June and September to mid October. This enthralling journey will take you through the scenic marvels and opulent beauty of the Himalayan Ranges. Passing mostly through the Dhauladhar Range of the Himalayas, the trek gets over within 4 days and offers ample of challenges and difficulties. In addition to explore and discover the natural beauty and the fascinating charm of the high Indrahar Pass, the trekkers will also get to explore and enjoy camping around the Lahesh Caves on their way. The panoramic views of Dhauladhar and other Himalayan peaks are the add-ons of this astounding trek. The most popular trek on the pass is a go to and come back because a lot of foreign tourists have their luggage at McLeodganj. Then there are those who pass the cross over to Chamba.</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal5">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal5" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d431170.88987390546!2d75.90601615048362!3d32.40515737372767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b55ce3711fbff%3A0x23d5aeaf093b03b9!2sIndrahar+Pass!5e0!3m2!1sen!2sin!4v1477019620125" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Trek to Guna Devi</h5>
+                </div>
+                <div class="collapsible-body"><p>Early start is recommended if you want to see the beautiful Himalayan birds. Leveled walk passing through Tibetan children village and Naddi village takes us to Bahl village. From Bahl village it is steep ascent for about an hour to Guna Devi, a small Hindu temple situated in the middle of the forest. People from the neighboring villages go for pilgrimage to this temple. We have beautiful views of Dhauladhars from the temple. On the way back we can go swimming in the river near Bahl village. Back to McLeod in the late afternoon. The beautiful Trek towards this Holy Temple passes through famous Dal Lake and Naddi Village. After a steep climb up to village balgaon with a panoramic view of Kangra valley towards south. To make this trek longer you can take another route via Galu Temple and Dharamkot to reach back to Mcleodganj. </p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal6">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal6" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.453616838548!2d76.31308551478163!3d32.27278008112728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b571d2e1c4c09%3A0x51ff761d55d5642f!2sShri+Gunna+Devi+Mandir!5e0!3m2!1sen!2sin!4v1477019726533" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <h5 class="collection-item">Bir-Barot-Kullu Over Sari Pass</h5>
+                </div>
+                <div class="collapsible-body"><p>If you are in Dharamshala and want to cross over to Manali through a trek, Sari Pass is your best bet. It's the easiest trek which takes you from the Mighty Dhauladhars to Pir Panjal Mountain Ranges through beautiful forests and greenery and natural views with amazing wild life, rhodendron, oak and many different kind of forests, beautiful villages and tribes, rivers, streams and lakes. Sari Galu, as Sari Pass is known locally, is one of the few passes which connect the Kangra and Kullu valleys. Set in deep jungles, far away from civilization, Sari shows the untouched beauty of the Himachal Himalayas. The trail starts at Lohardi, 31 km off the highway, in the watershed of the Uhl river. The jungles are lush green, dense and beautiful. On the western side, the trail runs all along the Lohardi/Sari stream. Camping along the stream under an umbrella of spruce trees is one of the must dos for any nature lover.</p>
+                         <!-- Modal Trigger -->
+                 <div class="center">
+                  <a class="margin-bottom margin-right waves-effect waves-light btn modal-trigger" href="#modal7">Map</a>
+                   <a class="margin-bottom waves-effect waves-light btn modal-trigger" href="../gallary.html">Gallary</a>
+                   </div>
+                  <!-- Modal Structure -->
+                  <div id="modal7" class="modal">
+                    <div class="modal-content">
+                       <div class="video-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.9534359455256!2d76.83410241477497!3d32.043451781199614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904955b3f1077df%3A0x4036be37860621ed!2sThandi+Golai+Camping+Ground!5e0!3m2!1sen!2sin!4v1477019905179" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </li>
+
+        </ul>
+    </main>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+               Himachal Pradesh Trecking
+                <a class="waves-effect waves-light modal-trigger right" href="#modal1">Contact Us</a>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <div class="form">
+                            <form action="#" method="get">
+                                <div class="input-field col s12">
+                                    <input id="FirstName" name="FirstName" type="text" required />
+                                    <label for="FirstName">Firstname</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="LastName" name="LastName" type="text"  required />
+                                    <label for="LastName">Lastname</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="Email" name="Email" type="email"  />
+                                    <label for="Email">Email</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <textarea class="materialize-textarea" id="MessageText" name="MessageText" rows="5" required ></textarea>
+                                    <label for="MessageText">Message</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <input class="btn left" onclick="app.contactUs('FirstName','LastName','Email','MessageText');" type="button" value="submit"/>
+                                    <a href="#!" class="right modal-action btn modal-close waves-effect waves-green">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/../cordova.js"></script>
+    <script type="text/javascript" src="/../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
